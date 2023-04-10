@@ -1,0 +1,80 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--color-4);
+  border-radius: 30px;
+
+  .search {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  
+    input {
+      font-size: 16px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      outline: 1px solid var(--color-3);
+
+      &:focus {
+        outline-color: var(--color-1);
+      }
+    }
+  
+    svg {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 17px;
+      left: 20px;
+      opacity: 0.3;
+    }
+  }
+
+  .users {
+    width: 100%;
+  }
+}
+
+.btn {
+  font-size: 16px;
+  color: var(--color-4);
+  text-align: center;
+  background-color: gray;
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: 0 7px 10px var(--color-2);
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+  
+  &.active {
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: var(--color-1);
+  }
+
+  &:hover {
+    background-color: var(--color-2);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
+
+.btnReset.active {
+  background-color: var(--color-2);
+}
